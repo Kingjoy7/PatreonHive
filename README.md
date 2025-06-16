@@ -1,5 +1,5 @@
 🎨 Patreon Clone – Next.js Edition
-A Next.js-powered membership platform inspired by Patreon, where creators can earn income through tiered subscriptions. Secure Razorpay payment integration, JWT-based authentication, and seamless server-side rendering (SSR) ensure a high-performance experience.
+A Next.js-powered membership platform inspired by Patreon, where creators can earn income through tiered subscriptions. Secure Razorpay payment integration, OAuth-based authentication, and seamless server-side rendering (SSR) ensure a high-performance experience.
 
 🚀 Features
 🔐 Authentication & User Roles
