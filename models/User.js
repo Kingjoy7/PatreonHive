@@ -12,14 +12,6 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
-    profilepic: {
-        type: String,
-        unique: false
-    },
-    coverpic: {
-        type: String,
-        unique: false
-    },
     createdAt: {
         type: Date,
         default: Date.now
@@ -27,6 +19,12 @@ const userSchema = new Schema({
     updatedAt: {
         type: Date,
         default: Date.now
-    }
+    },
+    razorpayid:{
+        type:String,
+    },
+    razorpaysecret:{
+        type:String,
+    },
 });
 export default mongoose.models.User || model('User', userSchema);

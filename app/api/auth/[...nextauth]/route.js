@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth'
 // import AppleProvider from 'next-auth/providers/apple'
 // import FacebookProvider from 'next-auth/providers/facebook'
-// import GoogleProvider from 'next-auth/providers/google'
+import GoogleProvider from 'next-auth/providers/google'
 // import EmailProvider from 'next-auth/providers/email'
 import GitHubProvider from "next-auth/providers/github";
 import mongoose from "mongoose";
@@ -24,10 +24,10 @@ export const authoptions = NextAuth({
     //     clientId: process.env.FACEBOOK_ID,
     //     clientSecret: process.env.FACEBOOK_SECRET
     //   }),
-    //   GoogleProvider({
-    //     clientId: process.env.GOOGLE_ID,
-    //     clientSecret: process.env.GOOGLE_SECRET
-    //   }),
+      GoogleProvider({
+        clientId: process.env.GOOGLE_ID,
+        clientSecret: process.env.GOOGLE_SECRET
+      }),
     //   // Passwordless / email sign in
     //   EmailProvider({
     //     server: process.env.MAIL_SERVER,
@@ -36,7 +36,7 @@ export const authoptions = NextAuth({
   ],
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
-      if (account.provider == "github") {
+      if (account.provider == "github" || account.provider == "google") {
         await connectDb()
         const currentUser = await User.findOne({ email: email })
         if (!currentUser) {
@@ -55,6 +55,7 @@ export const authoptions = NextAuth({
       }
     },
 
+
     async session({ session, user, token }) {
       const dbUser = await User.findOne({ email: session.user.email })
       console.log(dbUser)
@@ -63,5 +64,4 @@ export const authoptions = NextAuth({
     },
   }
 })
-
 export { authoptions as GET, authoptions as POST }
