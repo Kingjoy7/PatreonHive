@@ -12,27 +12,25 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-900 text-white h-16 flex justify-between items-center px-4 sm:px-6 lg:px-8 w-full">
-      {/* Logo Section */}
       <div className="flex items-center gap-3">
         <Image src="/chai.gif" width={26} height={26} alt="tea" className="rounded-full" />
-        <a href="/">
+        <Link href="/">
           <span className="logo font-bold text-lg font-serif cursor-pointer">PatreonHive</span>
-        </a>
+        </Link>
       </div>
 
-      {/* Auth Section */}
       <div className="relative flex items-center space-x-2">
         {session && (
           <>
             <button
               onClick={() => setshowdropdown(!showdropdown)}
               onBlur={() => setTimeout(() => setshowdropdown(false), 100)}
-              className="text-white bg-blue-700 font-serif font-bold hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm sm:text-base px-3 sm:px-5 py-2 sm:py-2.5 text-center inline-flex flex-wrap items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 max-w-full overflow-hidden"
+              className="text-white bg-blue-700 font-serif font-bold hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-xs sm:text-sm md:text-base px-2 sm:px-4 py-1.5 sm:py-2 text-center inline-flex flex-wrap items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 overflow-hidden truncate"
             >
-
-              Welcome {session.user.email}
+              Welcome <br />
+              {session.user.email}
               <svg
-                className="w-2.5 h-2.5 ms-3"
+                className="w-2.5 h-2.5 ms-2"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -47,7 +45,6 @@ const Navbar = () => {
                 />
               </svg>
             </button>
-
             <div
               className={`z-10 ${showdropdown ? "" : "hidden"} absolute top-14 right-0 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}
             >

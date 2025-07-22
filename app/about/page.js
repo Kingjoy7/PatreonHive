@@ -9,7 +9,7 @@ const About = () => {
                     About Us
                 </h1>
                 <p className="text-lg font-light font-mono text-gray-200">
-                    Welcome to our crowdfunding platform—a digital space designed to empower dreamers, creators, and changemakers. Here, ideas transcend boundaries, and communities rally behind the initiatives they believe in.
+                    Welcome to our crowdfunding platform — a digital space designed to empower dreamers, creators, and changemakers. Here, ideas transcend boundaries, and communities rally behind the initiatives they believe in.
                 </p>
             </div>
 
@@ -35,7 +35,7 @@ const About = () => {
                     Ready to support brilliant minds or launch your own idea?
                 </p>
                 <a href="/login">
-                    <button className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-lg font-semibold">
+                    <button className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 mt-5 rounded-lg font-semibold">
                         Join the Movement
                     </button>
                 </a>
