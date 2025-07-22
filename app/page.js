@@ -78,7 +78,7 @@ export default function Home() {
           <section className="max-w-4xl mx-auto px-4 text-center text-white py-12">
             <p className="text-2xl text-gray-300 leading-relaxed">
               PatreonHive is a platform built to empower creators. We help you connect with your audience,
-              monetize your content, and grow your creative journey. Whether you're an artist, developer,
+              monetize your content, and grow your creative journey. Whether you&apos;re an artist, developer,
               writer, or podcaster — your supporters can fund you directly with flexible, secure tools.
             </p>
           </section>
@@ -87,7 +87,7 @@ export default function Home() {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold mb-4 font-serif">Contact Us</h2>
               <p className="text-gray-300 mb-6">
-                Have questions, suggestions, or want to collaborate? We'd love to hear from you.
+                Have questions, suggestions, or want to collaborate? We&apos;d love to hear from you.
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center gap-6 text-left">
