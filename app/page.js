@@ -74,7 +74,6 @@ export default function Home() {
         <h2 className="text-2xl sm:text-3xl font-bold text-center my-4 font-serif pb-6">
           Learn more about us
         </h2>
-        <div className="w-full max-w-5xl aspect-video">
           <section className="max-w-4xl mx-auto px-4 text-center text-white py-12">
             <p className="text-2xl text-gray-300 leading-relaxed">
               PatreonHive is a platform built to empower creators. We help you connect with your audience,
@@ -115,8 +114,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-
-        </div>
+        
       </div>
     </>
   );
