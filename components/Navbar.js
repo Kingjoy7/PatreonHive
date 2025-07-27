@@ -28,7 +28,7 @@ const Navbar = () => {
               className="text-white bg-blue-700 font-serif font-bold hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-xs sm:text-sm md:text-base px-2 sm:px-4 py-1.5 sm:py-2 text-center inline-flex flex-wrap items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 overflow-hidden truncate"
             >
               Welcome <br />
-              {session.user.email}
+              {session.user.email.split('@')[0]}
               <svg
                 className="w-2.5 h-2.5 ms-2"
                 aria-hidden="true"
